@@ -41,6 +41,14 @@
         "documentation": {}
     },
     {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
         "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -50,6 +58,14 @@
     },
     {
         "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
@@ -81,6 +97,30 @@
         "documentation": {}
     },
     {
+        "label": "obtain_auth_token",
+        "importPath": "rest_framework.authtoken.views",
+        "description": "rest_framework.authtoken.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.authtoken.views",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
         "label": "django.db",
         "kind": 6,
         "isExtraImport": true,
@@ -90,14 +130,6 @@
         "documentation": {}
     },
     {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -170,11 +202,83 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -183,6 +287,14 @@
         "isExtraImport": true,
         "importPath": "rest_framework",
         "description": "rest_framework",
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "permissions",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
         "detail": "rest_framework",
         "documentation": {}
     },
@@ -315,22 +427,6 @@
         "documentation": {}
     },
     {
-        "label": "get_object_or_404",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
         "label": "Response",
         "importPath": "rest_framework.response",
         "description": "rest_framework.response",
@@ -387,6 +483,14 @@
         "documentation": {}
     },
     {
+        "label": "IsAuthenticated",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
         "label": "django.db.models.deletion",
         "kind": 6,
         "isExtraImport": true,
@@ -429,27 +533,11 @@
         "documentation": {}
     },
     {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
-        "documentation": {}
-    },
-    {
         "label": "User",
         "importPath": "django.contrib.auth.models",
         "description": "django.contrib.auth.models",
         "isExtraImport": true,
         "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
         "documentation": {}
     },
     {
@@ -511,7 +599,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"rest_framework\",\n    \"watchlist_app\",\n]",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"rest_framework\",\n    \"watchlist_app\",\n    \"rest_framework.authtoken\"",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -583,7 +671,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nREST_FRAMEWORK = {",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -592,7 +680,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nREST_FRAMEWORK = {\n    # 'DEFAULT_AUTHENTICATION_CLASSES': [",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -601,7 +689,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nREST_FRAMEWORK = {\n    # 'DEFAULT_AUTHENTICATION_CLASSES': [\n    #     'rest_framework.authentication.BasicAuthentication',",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -610,7 +698,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "STATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "STATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nREST_FRAMEWORK = {\n    # 'DEFAULT_AUTHENTICATION_CLASSES': [\n    #     'rest_framework.authentication.BasicAuthentication',\n    # ],\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'rest_framework.authentication.TokenAuthentication',",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -619,7 +707,16 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nREST_FRAMEWORK = {\n    # 'DEFAULT_AUTHENTICATION_CLASSES': [\n    #     'rest_framework.authentication.BasicAuthentication',\n    # ],\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'rest_framework.authentication.TokenAuthentication',\n    ]\n}",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "REST_FRAMEWORK",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "REST_FRAMEWORK = {\n    # 'DEFAULT_AUTHENTICATION_CLASSES': [\n    #     'rest_framework.authentication.BasicAuthentication',\n    # ],\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'rest_framework.authentication.TokenAuthentication',\n    ]\n}",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -628,7 +725,7 @@
         "kind": 5,
         "importPath": "core.urls",
         "description": "core.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"watch/\", include(\"watchlist_app.api.urls\")),\n    path('api-auth/', include('rest_framework.urls')),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"watch/\", include(\"watchlist_app.api.urls\")),\n    # path('api-auth/', include('rest_framework.urls')),\n    path('account/', include('user_app.api.urls')),\n]",
         "detail": "core.urls",
         "documentation": {}
     },
@@ -639,6 +736,33 @@
         "description": "core.wsgi",
         "peekOfCode": "application = get_wsgi_application()",
         "detail": "core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "UserAppConfig",
+        "kind": 6,
+        "importPath": "user_app.apps",
+        "description": "user_app.apps",
+        "peekOfCode": "class UserAppConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"user_app\"",
+        "detail": "user_app.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AdminOrReadOnly",
+        "kind": 6,
+        "importPath": "watchlist_app.api.permissions",
+        "description": "watchlist_app.api.permissions",
+        "peekOfCode": "class AdminOrReadOnly(permissions.IsAdminUser):\n    def has_permission(self, request):\n        admin_permission = bool(request.user and request.user.is_staff)\n        return request.method == 'GET' or admin_permission\nclass ReviewUserOrReadOnly(permissions.BasePermission):\n    def has_object_permission(self, request, view, obj):\n        if request.method in permissions.SAFE_METHODS:\n            return True\n        else:\n            return obj.review_user == request.user",
+        "detail": "watchlist_app.api.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "ReviewUserOrReadOnly",
+        "kind": 6,
+        "importPath": "watchlist_app.api.permissions",
+        "description": "watchlist_app.api.permissions",
+        "peekOfCode": "class ReviewUserOrReadOnly(permissions.BasePermission):\n    def has_object_permission(self, request, view, obj):\n        if request.method in permissions.SAFE_METHODS:\n            return True\n        else:\n            return obj.review_user == request.user",
+        "detail": "watchlist_app.api.permissions",
         "documentation": {}
     },
     {
@@ -673,7 +797,7 @@
         "kind": 6,
         "importPath": "watchlist_app.api.views",
         "description": "watchlist_app.api.views",
-        "peekOfCode": "class ReviewList(generics.ListAPIView):\n    serializer_class = ReviewSerializer\n    def get_queryset(self):\n        pk = self.kwargs[\"pk\"]\n        return Review.objects.filter(watchlist=pk)\nclass ReviewDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Review.objects.all()\n    serializer_class = ReviewSerializer\nclass ReviewCreate(generics.CreateAPIView):\n    serializer_class = ReviewSerializer",
+        "peekOfCode": "class ReviewList(generics.ListAPIView):\n    serializer_class = ReviewSerializer\n    permission_classes =[IsAuthenticated ]\n    def get_queryset(self):\n        pk = self.kwargs[\"pk\"]\n        return Review.objects.filter(watchlist=pk)\nclass ReviewDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Review.objects.all()\n    serializer_class = ReviewSerializer\n    permission_classes=[ReviewUserOrReadOnly]",
         "detail": "watchlist_app.api.views",
         "documentation": {}
     },
@@ -682,7 +806,7 @@
         "kind": 6,
         "importPath": "watchlist_app.api.views",
         "description": "watchlist_app.api.views",
-        "peekOfCode": "class ReviewDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Review.objects.all()\n    serializer_class = ReviewSerializer\nclass ReviewCreate(generics.CreateAPIView):\n    serializer_class = ReviewSerializer\n    def get_queryset(self):\n        return Review.objects.all()\n    def perform_create(self, serializer):\n        pk = self.kwargs[\"pk\"]\n        movie = WatchList.objects.get(pk=pk)",
+        "peekOfCode": "class ReviewDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Review.objects.all()\n    serializer_class = ReviewSerializer\n    permission_classes=[ReviewUserOrReadOnly]\nclass ReviewCreate(generics.CreateAPIView):\n    serializer_class = ReviewSerializer\n    def get_queryset(self):\n        return Review.objects.all()\n    def perform_create(self, serializer):\n        pk = self.kwargs[\"pk\"]",
         "detail": "watchlist_app.api.views",
         "documentation": {}
     },
@@ -691,7 +815,7 @@
         "kind": 6,
         "importPath": "watchlist_app.api.views",
         "description": "watchlist_app.api.views",
-        "peekOfCode": "class ReviewCreate(generics.CreateAPIView):\n    serializer_class = ReviewSerializer\n    def get_queryset(self):\n        return Review.objects.all()\n    def perform_create(self, serializer):\n        pk = self.kwargs[\"pk\"]\n        movie = WatchList.objects.get(pk=pk)\n        review_user = self.request.user\n        review_queryset=Review.objects.filter(review_user=review_user,watchlist=movie)\n        if review_queryset.exists():",
+        "peekOfCode": "class ReviewCreate(generics.CreateAPIView):\n    serializer_class = ReviewSerializer\n    def get_queryset(self):\n        return Review.objects.all()\n    def perform_create(self, serializer):\n        pk = self.kwargs[\"pk\"]\n        watchlist = WatchList.objects.get(pk=pk)\n        review_user = self.request.user\n        review_queryset=Review.objects.filter(review_user=review_user,watchlist=watchlist)\n        if review_queryset.exists():",
         "detail": "watchlist_app.api.views",
         "documentation": {}
     },
@@ -768,6 +892,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "watchlist_app.migrations.0006_watchlist_avg_rating_watchlist_number_rating",
+        "description": "watchlist_app.migrations.0006_watchlist_avg_rating_watchlist_number_rating",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"watchlist_app\", \"0005_review_review_user_alter_review_watchlist\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"watchlist\",\n            name=\"avg_rating\",\n            field=models.FloatField(default=0),\n        ),",
+        "detail": "watchlist_app.migrations.0006_watchlist_avg_rating_watchlist_number_rating",
+        "documentation": {}
+    },
+    {
         "label": "WatchlistAppConfig",
         "kind": 6,
         "importPath": "watchlist_app.apps",
@@ -790,7 +923,7 @@
         "kind": 6,
         "importPath": "watchlist_app.models",
         "description": "watchlist_app.models",
-        "peekOfCode": "class WatchList(models.Model):\n    title = models.CharField(max_length=50)\n    storyline = models.TextField(max_length=360)\n    active = models.BooleanField(default=True)\n    created = models.DateTimeField(auto_now_add=True)\n    platform=models.ForeignKey(StreamPlatform, on_delete=models.CASCADE, related_name=\"watchlist\")\n    def __str__(self):\n        return self.title\nclass Review(models.Model):\n    review_user = models.ForeignKey(User, on_delete=models.CASCADE)",
+        "peekOfCode": "class WatchList(models.Model):\n    title = models.CharField(max_length=50)\n    storyline = models.TextField(max_length=360)\n    active = models.BooleanField(default=True)\n    created = models.DateTimeField(auto_now_add=True)\n    platform=models.ForeignKey(StreamPlatform, on_delete=models.CASCADE, related_name=\"watchlist\")\n    avg_rating = models.FloatField(default=0)\n    number_rating =models.FloatField(default=0)\n    def __str__(self):\n        return self.title",
         "detail": "watchlist_app.models",
         "documentation": {}
     },

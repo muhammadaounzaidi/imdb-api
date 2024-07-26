@@ -1,5 +1,4 @@
 from django.shortcuts import get_object_or_404
-import rest_framework
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
@@ -13,6 +12,8 @@ from watchlist_app.models import Review, StreamPlatform, WatchList
 from rest_framework import mixins
 from rest_framework import generics, viewsets
 from rest_framework.exceptions import ValidationError
+from .permissions import *
+from rest_framework.permissions import IsAuthenticated
 
 # class ReviewList(
 #     mixins.ListModelMixin, mixins.CreateModelMixin, generics.GenericAPIView
@@ -41,7 +42,7 @@ from rest_framework.exceptions import ValidationError
 class ReviewList(generics.ListAPIView):
 
     serializer_class = ReviewSerializer
-
+    permission_classes =[IsAuthenticated ]
     def get_queryset(self):
         pk = self.kwargs["pk"]
         return Review.objects.filter(watchlist=pk)
@@ -50,6 +51,7 @@ class ReviewList(generics.ListAPIView):
 class ReviewDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
+    permission_classes=[ReviewUserOrReadOnly]
 
 
 class ReviewCreate(generics.CreateAPIView):
@@ -57,15 +59,23 @@ class ReviewCreate(generics.CreateAPIView):
     def get_queryset(self):
         return Review.objects.all()
     def perform_create(self, serializer):
+        
         pk = self.kwargs["pk"]
-        movie = WatchList.objects.get(pk=pk)
+        watchlist = WatchList.objects.get(pk=pk)
         review_user = self.request.user
-        review_queryset=Review.objects.filter(review_user=review_user,watchlist=movie)
+        review_queryset=Review.objects.filter(review_user=review_user,watchlist=watchlist)
         
         if review_queryset.exists():
             raise ValidationError("You have already submitted the review.")
         
-        serializer.save(watchlist=movie,review_user=review_user)
+        if watchlist.number_rating==0:
+            watchlist.avg_rating=serializer.validated_data['rating']
+        else:
+            watchlist.avg_rating=(watchlist.avg_rating +serializer.validated_data['rating'])/2
+            
+        watchlist.number_rating=watchlist.number_rating+1
+        watchlist.save()
+        serializer.save(watchlist=watchlist,review_user=review_user)
 
 
 class WatchListAV(APIView):

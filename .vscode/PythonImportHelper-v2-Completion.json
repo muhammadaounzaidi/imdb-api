@@ -752,7 +752,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"rest_framework\",\n    \"watchlist_app\",\n    \"rest_framework.authtoken\"",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"rest_framework\",\n    \"watchlist_app\",\n    \"rest_framework.authtoken\",",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -997,6 +997,15 @@
         "description": "watchlist_app.api.throtling",
         "peekOfCode": "class ReviewListThrottle(UserRateThrottle):\n    scope = 'review-list'",
         "detail": "watchlist_app.api.throtling",
+        "documentation": {}
+    },
+    {
+        "label": "UserReviewList",
+        "kind": 6,
+        "importPath": "watchlist_app.api.views",
+        "description": "watchlist_app.api.views",
+        "peekOfCode": "class UserReviewList(generics.ListAPIView):\n    serializer_class = ReviewSerializer\n    def get_queryset(self):\n    #     username=self.kwargs['username']\n    #     return Review.objects.filter(review_user__username=username)\n        queryset = Review.objects.all()\n        username = self.request.query_params.get('username')\n        if username is not None:\n            queryset = queryset.filter(review_user__username=username)\n        return queryset",
+        "detail": "watchlist_app.api.views",
         "documentation": {}
     },
     {

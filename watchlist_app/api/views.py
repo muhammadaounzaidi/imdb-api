@@ -16,6 +16,22 @@ from .permissions import *
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.throttling import UserRateThrottle, AnonRateThrottle, ScopedRateThrottle
 from .throtling import *
+
+
+class UserReviewList(generics.ListAPIView):
+    serializer_class = ReviewSerializer
+
+    def get_queryset(self):
+
+    #     username=self.kwargs['username']
+    #     return Review.objects.filter(review_user__username=username)
+        queryset = Review.objects.all()
+        username = self.request.query_params.get('username')
+        if username is not None:
+            queryset = queryset.filter(review_user__username=username)
+        return queryset
+    
+    
 # class ReviewList(
 #     mixins.ListModelMixin, mixins.CreateModelMixin, generics.GenericAPIView
 # ):

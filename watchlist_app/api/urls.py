@@ -20,5 +20,5 @@ urlpatterns=[
     path("<int:pk>/review-create",ReviewCreate.as_view(), name="stream-detail"),
     path("<int:pk>/reviews",ReviewList.as_view(), name="review-list"),
     path("review/<int:pk>",ReviewDetail.as_view(),name="review-detail"),
-    
+    path('reviews/', UserReviewList.as_view(),name="user-review-detail")
 ]

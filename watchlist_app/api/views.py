@@ -51,7 +51,7 @@ class ReviewList(generics.ListAPIView):
 class ReviewDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
-    permission_classes=[ReviewUserOrReadOnly]
+    permission_classes=[IsReviewUserOrReadOnly]
 
 
 class ReviewCreate(generics.CreateAPIView):
@@ -79,6 +79,7 @@ class ReviewCreate(generics.CreateAPIView):
 
 
 class WatchListAV(APIView):
+    permission_classes = [IsAdminOrReadOnly]
     def get(self, request):
         movies = WatchList.objects.all()
         serializer = WatchListSerializer(movies, many=True)
@@ -94,6 +95,7 @@ class WatchListAV(APIView):
 
 
 class WatchDetailAV(APIView):
+    permission_classes = [IsAdminOrReadOnly]
     def get(self, request, pk):
         try:
             movie = WatchList.objects.get(pk=pk)
@@ -119,7 +121,7 @@ class WatchDetailAV(APIView):
 class StreamPlatformVS(viewsets.ModelViewSet):
     queryset = StreamPlatform.objects.all()
     serializer_class = StreamPlatformSerializer
-
+    permission_classes = [IsAdminOrReadOnly]
 
 # class StreamPlatformVS(viewsets.ViewSet):
 

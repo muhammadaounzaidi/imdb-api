@@ -564,6 +564,38 @@
         "documentation": {}
     },
     {
+        "label": "UserRateThrottle",
+        "importPath": "rest_framework.throttling",
+        "description": "rest_framework.throttling",
+        "isExtraImport": true,
+        "detail": "rest_framework.throttling",
+        "documentation": {}
+    },
+    {
+        "label": "UserRateThrottle",
+        "importPath": "rest_framework.throttling",
+        "description": "rest_framework.throttling",
+        "isExtraImport": true,
+        "detail": "rest_framework.throttling",
+        "documentation": {}
+    },
+    {
+        "label": "AnonRateThrottle",
+        "importPath": "rest_framework.throttling",
+        "description": "rest_framework.throttling",
+        "isExtraImport": true,
+        "detail": "rest_framework.throttling",
+        "documentation": {}
+    },
+    {
+        "label": "ScopedRateThrottle",
+        "importPath": "rest_framework.throttling",
+        "description": "rest_framework.throttling",
+        "isExtraImport": true,
+        "detail": "rest_framework.throttling",
+        "documentation": {}
+    },
+    {
         "label": "*",
         "importPath": "watchlist_app.api.views",
         "description": "watchlist_app.api.views",
@@ -828,7 +860,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nREST_FRAMEWORK = {\n    # 'DEFAULT_AUTHENTICATION_CLASSES': [\n    #     'rest_framework.authentication.BasicAuthentication',\n    # ],\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        # 'rest_framework.authentication.TokenAuthentication',\n         'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ]\n}",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nREST_FRAMEWORK = {\n    # 'DEFAULT_AUTHENTICATION_CLASSES': [\n    #     'rest_framework.authentication.BasicAuthentication',\n    # ],\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        # 'rest_framework.authentication.TokenAuthentication',\n         'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ],\n    # 'DEFAULT_THROTTLE_CLASSES': [",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -837,7 +869,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "REST_FRAMEWORK = {\n    # 'DEFAULT_AUTHENTICATION_CLASSES': [\n    #     'rest_framework.authentication.BasicAuthentication',\n    # ],\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        # 'rest_framework.authentication.TokenAuthentication',\n         'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ]\n}",
+        "peekOfCode": "REST_FRAMEWORK = {\n    # 'DEFAULT_AUTHENTICATION_CLASSES': [\n    #     'rest_framework.authentication.BasicAuthentication',\n    # ],\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        # 'rest_framework.authentication.TokenAuthentication',\n         'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ],\n    # 'DEFAULT_THROTTLE_CLASSES': [\n    #     'rest_framework.throttling.AnonRateThrottle',",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -950,11 +982,29 @@
         "documentation": {}
     },
     {
+        "label": "ReviewCreateThrottle",
+        "kind": 6,
+        "importPath": "watchlist_app.api.throtling",
+        "description": "watchlist_app.api.throtling",
+        "peekOfCode": "class ReviewCreateThrottle(UserRateThrottle):\n    scope = 'review-create'\nclass ReviewListThrottle(UserRateThrottle):\n    scope = 'review-list'",
+        "detail": "watchlist_app.api.throtling",
+        "documentation": {}
+    },
+    {
+        "label": "ReviewListThrottle",
+        "kind": 6,
+        "importPath": "watchlist_app.api.throtling",
+        "description": "watchlist_app.api.throtling",
+        "peekOfCode": "class ReviewListThrottle(UserRateThrottle):\n    scope = 'review-list'",
+        "detail": "watchlist_app.api.throtling",
+        "documentation": {}
+    },
+    {
         "label": "ReviewList",
         "kind": 6,
         "importPath": "watchlist_app.api.views",
         "description": "watchlist_app.api.views",
-        "peekOfCode": "class ReviewList(generics.ListAPIView):\n    serializer_class = ReviewSerializer\n    permission_classes =[IsAuthenticated ]\n    def get_queryset(self):\n        pk = self.kwargs[\"pk\"]\n        return Review.objects.filter(watchlist=pk)\nclass ReviewDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Review.objects.all()\n    serializer_class = ReviewSerializer\n    permission_classes=[IsReviewUserOrReadOnly]",
+        "peekOfCode": "class ReviewList(generics.ListAPIView):\n    serializer_class = ReviewSerializer\n    permission_classes =[IsAuthenticated ]\n    throttle_classes = [ReviewListThrottle, AnonRateThrottle]\n    def get_queryset(self):\n        pk = self.kwargs[\"pk\"]\n        return Review.objects.filter(watchlist=pk)\nclass ReviewDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Review.objects.all()\n    serializer_class = ReviewSerializer",
         "detail": "watchlist_app.api.views",
         "documentation": {}
     },

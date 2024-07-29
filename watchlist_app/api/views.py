@@ -14,7 +14,8 @@ from rest_framework import generics, viewsets
 from rest_framework.exceptions import ValidationError
 from .permissions import *
 from rest_framework.permissions import IsAuthenticated
-
+from rest_framework.throttling import UserRateThrottle, AnonRateThrottle, ScopedRateThrottle
+from .throtling import *
 # class ReviewList(
 #     mixins.ListModelMixin, mixins.CreateModelMixin, generics.GenericAPIView
 # ):
@@ -43,6 +44,7 @@ class ReviewList(generics.ListAPIView):
 
     serializer_class = ReviewSerializer
     permission_classes =[IsAuthenticated ]
+    throttle_classes = [ReviewListThrottle, AnonRateThrottle]
     def get_queryset(self):
         pk = self.kwargs["pk"]
         return Review.objects.filter(watchlist=pk)
